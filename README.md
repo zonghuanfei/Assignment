@@ -1,6 +1,4 @@
 # Assignment
-学习了台大机器人学第一章和第二章2.1
-# Assignment
 Markdown学习
 ============
 初步接触入门资料：https://www.bilibili.com/video/BV1NA411j71W?from=search&seid=17510046161080144734&spm_id_from=333.337.0.0    
