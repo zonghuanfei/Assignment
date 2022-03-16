@@ -122,9 +122,9 @@ int main
 ### 本书的符号与约定：matlab的命令提示符：>>  m  /
 ### 机器人和计算机视觉中的一个基本要求是能够表示物体在环境中的位置和方向。  
 ### 坐标轴的位置和方向总称为位姿，相对一个坐标系的相对位姿用符号ξ表示，坐标系|B|相当于坐标系|A|的相对位姿记为AξB，上标表示参考坐标系，下标表示被描述的坐标系。  
-### p点可以用任意一个坐标系表示：AP=AξB*Bp，等号右边表示从A到B的动作。  
-### 相对位姿可以合成或组合：AξC=AξB+BξC,即C相对于A的位姿可以用B相对于A的位姿和C相对于B的位姿合称得到。  
-### 可表达为：AP=（AξB+BξC)*CP  
+### p点可以用任意一个坐标系表示：![图片不见了](https://github.com/zonghuanfei/Assignment/blob/main/OZUZSO6U9%60G%603I8~D%602L%7D8R.png)  ，等号右边表示从A到B的动作。  
+### 相对位姿可以合成或组合：![图片不见了](https://github.com/zonghuanfei/Assignment/blob/main/Y9GJB~~%7DV8Y0%5DSYGG%60~N_61.png),即C相对于A的位姿可以用B相对于A的位姿和C相对于B的位姿合称得到。  
+### 可表达为：![图片不见了](https://github.com/zonghuanfei/Assignment/blob/main/T3I~%5BU0RO%5BZP%24Y%24EXX2P~LO.png)
 ### 2.1二维空间位姿描述  平行于x，y轴的单位向量用x尖，y尖表示：则有p=xx尖＋yy尖    
 
 
