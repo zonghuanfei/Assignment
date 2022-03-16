@@ -3,8 +3,8 @@
 Markdown学习
 ============
 
-初步接触入门资料：https://www.bilibili.com/video/BV1NA411j71W?from=search&seid=17510046161080144734&spm_id_from=333.337.0.0    
------------
+### 初步接触入门资料：https://www.bilibili.com/video/BV1NA411j71W?from=search&seid=17510046161080144734&spm_id_from=333.337.0.0    
+
 
 一，标题  
 -----------
@@ -131,6 +131,7 @@ int main
 ### 该方法是考虑一个任意点Р相对于每个坐标系的向量，并确定Ap和Bp之间的关系。再次回到图2.6,我们将问题分成两部分:旋转,然后平移。  
 ### ![图片不见了](https://github.com/zonghuanfei/Assignment/blob/main/7.png)   
 ### ![图片不见了](https://github.com/zonghuanfei/Assignment/blob/main/8.png)  
+### ![图片不见了](https://github.com/zonghuanfei/Assignment/blob/main/9.png)
 
 
 
