@@ -188,13 +188,13 @@ int main
 
 下面例子演示了矩阵的定义:
 
-![](C:\Users\34117\Desktop\图片\matlab2.png)
+![](https://github.com/zonghuanfei/Assignment/blob/78019fd05af420aea5e4511dd65b6a02a5750363/matlab2.png)
 
 冒号运算符：格式为a（初始）：b（步长）：c（末值）可以建立一个步长为b，初始值为a，末值为c的向量。
 
-![](C:\Users\34117\Desktop\图片\matlab3.png)
-
-### 特殊矩阵![](C:\Users\34117\Desktop\图片\matlab4.png)
+![](https://github.com/zonghuanfei/Assignment/blob/78019fd05af420aea5e4511dd65b6a02a5750363/matlab3.png)
+ ## 特殊矩阵：  
+![](https://github.com/zonghuanfei/Assignment/blob/78019fd05af420aea5e4511dd65b6a02a5750363/matlab4.png)
 
 diga()---对角线矩阵；  
 ones（m,n）——创建m*n全1矩阵；ones（m）——创建m*m全1矩阵；  
@@ -257,7 +257,7 @@ MATLAB矩阵排序方法是从第一列开始向下排序，抵达最后一行�
 
 与c++等语言不同，MATLAB索引下标从1开始。
 
-### ![](C:\Users\34117\Desktop\图片\matlab5.png)
+###  ![](https://github.com/zonghuanfei/Assignment/blob/78019fd05af420aea5e4511dd65b6a02a5750363/matlab5.png)
 
 
 
@@ -265,7 +265,7 @@ MATLAB矩阵排序方法是从第一列开始向下排序，抵达最后一行�
 
 常用指令：
 
-![](C:\Users\34117\Desktop\图片\matlab6.png)
+![](https://github.com/zonghuanfei/Assignment/blob/78019fd05af420aea5e4511dd65b6a02a5750363/matlab6.png)
 
 
 
@@ -343,7 +343,7 @@ edit命令：查看对应位置内置函数的源代码.
 
 edit(which('mean.m'))
 
-![](C:\Users\34117\Desktop\图片\matlab7.png)
+![](https://github.com/zonghuanfei/Assignment/blob/78019fd05af420aea5e4511dd65b6a02a5750363/matlab7.png)
 
 自定义函数并得到.m文件：  
 
