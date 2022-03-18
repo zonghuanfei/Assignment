@@ -132,3 +132,242 @@ int main
 ### ![图片不见了](https://github.com/zonghuanfei/Assignment/blob/main/7.png)   
 ### ![图片不见了](https://github.com/zonghuanfei/Assignment/blob/main/8.png)  
 ### ![图片不见了](https://github.com/zonghuanfei/Assignment/blob/main/9.png)
+# MATLAB教程  
+
+#   
+
+[TOC]
+
+## 1.MATLAB内置的算数运算函数
+
+> 基本运算:
+> 加:` +,sum,cumsum,movsum`
+> 减: `-,diff`
+> 乘: `.*,*,prod,cumprod`
+> 除:` ./,.\,/,\`
+> 乘方: `.^,^`
+> 取模运算: `mod,rem,idivide,ceil,fix,floor,round`
+> MATLAB内置的三角运算函数
+> 正弦: `sin,sind,sinpi,asin,asind,sinh,asinh`
+> 余弦: `cos,cosd,cospi,acos,acosd,cosh,acosh`
+> 正切: `tan,tand,atan,atand,atan2,atan2d,tanh,atanh`
+> 余割: `csc,cscd,acsc,acscd,csch,acsch`
+> 正割: `sec,secd,asec,asecd,sech,asech`
+> 余切: `cot,cotd,acot,acotd,coth,acoth`
+> 斜边:` hypot`
+> 转换: `deg2rad,rad2deg,cart2pol,cart2sph,pol2cart,sph2cart`
+> MATLAB内置的指数对数函数: `exp,expm1,log,log10,log1p,log2,nextpow2,nthroot,pow2,reallog,realpow,realsqrt,sqrt`
+> MATLAB内置的复函数: `abs,angle,complex,conj,cplxpair,i,imag,isreal,j,real,sign,unwrap`
+>
+> 资料来源于网络
+> ————————————————
+
+## 2.变量
+
+无需声明，用=赋值即可。 
+
+ 变量名只能用数字，字母，下划线组成且不能以数字开头。  
+
+同时，`ans`,`pi`等关键字也不能作为MATLAB变量名称，`iskeyword`命令可用于查看MATLAB语言的关键字。 
+
+ 用who和whos指令可以查看变量的相关信息。
+
+变量的优先级高于内建函数。
+
+也可以在workspace查看相关信息。
+
+`clear 变量`可以把特定变量从workspace清除,`clear`是清空workspace的所有内容。`clc`可以清空控制台记录。
+
+## 3.用MATLAB计算矩阵相关问题 
+
+### 矩阵的定义：
+
+如何向终端输入矩阵？
+
+在MATLAB中,使用`[]`将待输入的矩阵内容括起来,用空格或者逗号分割同行的数据
+
+下面例子演示了矩阵的定义:
+
+![](C:\Users\34117\Desktop\图片\matlab2.png)
+
+冒号运算符：格式为a（初始）：b（步长）：c（末值）可以建立一个步长为b，初始值为a，末值为c的向量。
+
+![](C:\Users\34117\Desktop\图片\matlab3.png)
+
+### 特殊矩阵![](C:\Users\34117\Desktop\图片\matlab4.png)
+
+diga()---对角线矩阵；  
+ones（m,n）——创建m*n全1矩阵；ones（m）——创建m*m全1矩阵；  
+
+ones(size(A))——创建和矩阵A相同维度的全1矩阵；  
+zeros(m,n)——创建m*n全0矩阵；*  
+
+*zeros（m）——创建m*m全0矩阵；zeros(size(A))——创建和矩阵A相同维度的全0矩阵；  
+eye(m,n)——创建m*n单位矩阵；*
+
+*eye(m)——创建n*n单位矩阵；eye(eye(A))——创建和矩阵A相同维度的单位矩阵；  
+magic(m)——创建m*m魔术矩阵；
+rand(m,n)——创建m*n的矩阵，矩阵中的元素为0~1之间均匀分布的随机数；rand(n)——与zeros，ones相同；
+randn命令创建的矩阵，其中的元素为零均值，单位方差的正态分布函数，randn(m,n),rand(m),同上；
+triu(A)——用于创建和A大小相同的上三角矩阵，新矩阵中的元素为A中对角线及其上方的元素；triu(A,q)——创建一个由矩阵A第q条对角线的元素组成及其上方元素，其余元素都为0 的矩阵。（q=0表示主对角线，q<0表示主对角线下的第q条对角线，q>0表示主对角线上的第q条对角线）；
+tril命令用于创建下三角矩阵，参数意义同上。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+（上述例子来自于https://blog.csdn.net/ncepu_Chen/article/details/103034286 ）
+
+### 矩阵的计算
+
+| 运算符    | 作用                                           |
+| --------- | ---------------------------------------------- |
+| 加号＋    | 矩阵与矩阵（向量）相加                         |
+| 减号－    | 矩阵与矩阵（向量）相减                         |
+| 乘号*     | 矩阵与矩阵相乘                                 |
+| 点乘.*    | 矩阵与矩阵对应位置相乘                         |
+| 左下划线/ | 矩阵A与矩阵B右除，或者说矩阵A与矩阵B逆矩阵相乘 |
+| 右下划线\ | 矩阵A与矩阵B左除，或者说矩阵B逆矩阵与矩阵A相乘 |
+| ./        | 矩阵与矩阵右除(等价于`A*inv(B)`)               |
+| .\        | 矩阵与矩阵左除(等价于`inv(A)*B`)               |
+| ^         | 矩阵与向量乘方                                 |
+| .^        | 矩阵与矩阵对应位置乘方                         |
+|           |                                                |
+|           |                                                |
+
+
+
+###  矩阵的索引
+
+MATLAB矩阵排序方法是从第一列开始向下排序，抵达最后一行折返至第二列第一行继续向下读取，反复此操作。
+
+与c++等语言不同，MATLAB索引下标从1开始。
+
+### ![](C:\Users\34117\Desktop\图片\matlab5.png)
+
+
+
+## 程序设计
+
+常用指令：
+
+![](C:\Users\34117\Desktop\图片\matlab6.png)
+
+
+
+1.if语句
+
+```
+if rem(a, 2) == 0
+	disp('a is even');
+else
+	disp('a is odd');
+end
+```
+
+2.Switch语句
+
+```
+switch input_num
+case -1
+	disp('negative 1');
+case 0
+	disp('zero');
+case 1
+	disp('positive 1');
+otherwise
+	disp('other value');
+end
+```
+
+3.while语句
+
+```
+n = 1;
+while prod(1:n) < 1e100
+	n = n + 1;
+end
+```
+
+4.for语句
+
+```
+for n=1:10
+	a(n)=2^n;
+end
+disp(a)
+```
+
+常用逻辑运算符：
+
+| <    | 小于       |
+| ---- | ---------- |
+| <=   | 小于或等于 |
+| >    | 大于       |
+| \>=  | 大于或等于 |
+| ==   | 等于       |
+| ~=   | 不等于     |
+| &&   | 且         |
+| \|\| | 或         |
+
+tips：使用循环语句应尽量预先分配内存空间
+
+若一个变量所需要的内存空间是一个可预测的定值,我们应尽量提前为其分配内存空间.
+
+
+
+函数  
+与其他语言相似,MATLAB也可以定义函数.与脚本类似,函数可以被存入函数名.m文件中,也可以以函数句柄的形式定义在内存中.
+
+### 查看内置函数
+
+which命令：查看内置函数源代码文件的位置
+
+edit命令：查看对应位置内置函数的源代码.
+
+运行下面语句可以打开MATLAB内置的mean函数的源文件:
+
+edit(which('mean.m'))
+
+![](C:\Users\34117\Desktop\图片\matlab7.png)
+
+自定义函数并得到.m文件：  
+
+```MATLAB
+function [输出变量名] = 函数名(输入变量名)  
+% 函数的文档 
+函数代码
+```
+
+输出变量和输入变量不是必须的，函数名要和.m文件相同
+
+
+
+### MATLAB内置的函数参数
+
+在MATLAB中,内置了一些函数参数如下:
+
+| 函数参数    | 意义               |
+| ----------- | ------------------ |
+| `imputname` | 输入变量名列表     |
+| `mfilename` | 函数源代码文件名   |
+| `nargin`    | 输入变量数         |
+| `nargout`   | 输出变量个数       |
+| `varargin`  | 可变长输入参数列表 |
+| `varargout` | 可变长输出参数列表 |
+
+tips：MATLAB与其他语言不同，不提供默认参数值和重载函数这些语法
