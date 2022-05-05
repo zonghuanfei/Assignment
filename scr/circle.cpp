@@ -16,9 +16,9 @@ int main(int argc, char** argv)
 
     geometry_msgs::Twist twist;
 
-    twist.linear.x = 2.0;
+    twist.linear.x = 1；
 
-    twist.angular.z = 1.0;  
+    twist.angular.z = 1;  
 
     ros::Rate r(10);
 
